@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyrim Детектирование Оружия</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="http://127.0.0.1:5000/cnn" class="change-color-link"> CNN-Классификация</a>
+        <a href="http://127.0.0.1:5000/transfer-learning" class="change-color-link"> Transfer Learning-Классификация</a>
+    </nav>
+    <hr>
+    <hr>
+    <h1>Skyrim Детектирование Оружия</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Загрузить Скриншот:</label>
+        <input type="file" name="file" id="file" accept="image/*" required>
+        <button type="submit">Детектировать Оружие</button>
+    </form>
+
+    {% if result_image %}
+    <h2>Результат Детектирования:</h2>
+    <div class="imagebox"><img src="{{ result_image }}" alt="Detection Result" style="max-width: 640px;"></div>
+    {% endif %}
+</body>
+</html>

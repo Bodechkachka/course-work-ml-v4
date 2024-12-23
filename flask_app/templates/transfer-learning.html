@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyrim Классификация Оружия</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="http://127.0.0.1:5000" class="change-color-link"> Детектирование </a>
+        <a href="http://127.0.0.1:5000/cnn" class="change-color-link">CNN-Классификация</a>
+    </nav>
+    <hr>
+    <hr>
+    <form action="/classify" method="post" enctype="multipart/form-data">
+        <label for="file">Загрузить Скриншот для Классификации:</label>
+        <input type="file" name="file" id="file" accept="image/*" required>
+        <button type="submit">Классифицировать Оружие</button>
+    </form>
+
+    {% if classification_result %}
+    <h2>Результат Классификации:</h2>
+    <p class="prediction">Предполагаемый класс: {{ classification_result }}</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+.prediction {
+    text-align: center;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+form {
+    margin: 20px auto;
+    max-width: 300px;
+    text-align: left;
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+form input[type="file"] {
+    margin-bottom: 10px;
+}
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #555;
+}
+.imagebox {
+    max-width: 650px;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.change-color-link{
+  color: #f66d52;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px 0px;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+}
+.change-color-link:hover{
+  color: #ffa000;
+}
+
+
